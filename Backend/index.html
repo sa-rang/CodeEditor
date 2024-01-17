@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSE Share List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            background-color: #012a2a;
+        }
+
+
+        .container {
+            position: relative;
+            margin-top: 10%;
+            width: 500px;
+            color: #d1d1d1;
+        }
+
+        h1 {
+            font-size: 28;
+            margin-block: 10px;
+            text-align: center;
+        }
+
+        input {
+            font-size: 18px;
+            padding-block: 10px;
+            padding-inline: 10px;
+            width: 100%
+        }
+
+        .list {
+            position: absolute;
+            top: 100px;
+            list-style: none;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        li {
+            margin-block: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #d1d1d1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>NSE(India) Stocks Search | Mock API</h1>
+        <input id="searchbar" onkeyup="searchShare()" type="text" name="search" placeholder="Search shares..">
+        <ul id="list" class="list">
+
+        </ul>
+    </div>
+    <script>
+
+        // JavaScript code
+        var timerId;
+        // Debounce function: Input as function which needs to be debounced and delay is the debounced time in milliseconds
+        function debounceFunction(func, delay) {
+            // Cancels the setTimeout method execution
+            clearTimeout(timerId)
+
+            // Executes the func after delay time.
+            timerId = setTimeout(func, delay)
+        }
+
+        function renderSearchResult() {
+            let input = document.getElementById('searchbar').value
+            input = input.toLowerCase();
+            let ul = document.getElementById('list');
+            if (input) {
+                // Making our request
+                fetch("https://nse-api.netlify.app/api/search/" + input, { method: 'GET' })
+                    .then(Result => Result.json())
+                    .then(data => {
+                        // Printing our response
+                        console.log(data);
+                        ul.innerHTML = "";
+                        for (let i = 0; i < data.length; i++) {
+                            let name = data[i].Name;
+                            let li = document.createElement('li');
+                            let anchor = document.createElement('a');
+                            anchor.setAttribute("href", `/api/symbol/${data[i].Symbol}`);
+                            anchor.innerText = `${name}`
+                            //li.appendChild(document.createTextNode(name));
+                            li.appendChild(anchor);
+                            ul.appendChild(li);
+                        }
+                    })
+                    .catch(errorMsg => { console.log(errorMsg); });
+            }
+        }
+
+        function searchShare() {
+            // Debounces makeAPICall method
+            debounceFunction(renderSearchResult, 300)
+        }
+    </script>
+</body>
+
+</html>

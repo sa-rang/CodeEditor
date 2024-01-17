@@ -1,0 +1,282 @@
+[
+    {
+        "qId": "1",
+        "title": "Reverse Words in a String",
+        "instruction": "Write a JavaScript function that takes a string as input and reverses the order of words in the string.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=\"Hello World\"\nconsole.log(execute(testCase)); // Should log \"World Hello\"",
+        "tests": [
+            {
+                "input": "\"Hello World\"",
+                "output": "World Hello"
+            },
+            {
+                "input": "\"JavaScript is fun\"",
+                "output": "fun is JavaScript"
+            },
+            {
+                "input": "\"  Frontend Development   \"",
+                "output": "Development Frontend"
+            },
+            {
+                "input": "\"\"",
+                "output": ""
+            },
+            {
+                "input": "\"   SingleWord   \"",
+                "output": "SingleWord"
+            }
+        ]
+    },
+    {
+        "qId": "2",
+        "title": "Check Even/Odd",
+        "instruction": "Write a JavaScript function that takes a Number and returns 'Even' or 'Odd' ",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=8\nconsole.log(execute(testCase)); // Should log \"Even\"",
+        "tests": [
+            {
+                "input": 2,
+                "output": "Even"
+            },
+            {
+                "input": 3,
+                "output": "Odd"
+            },
+            {
+                "input": 20,
+                "output": "Even"
+            },
+            {
+                "input": 13,
+                "output": "Odd"
+            },
+            {
+                "input": 0,
+                "output": "Even"
+            }
+        ]
+    },
+    {
+        "qId": "3",
+        "title": "Double the number",
+        "instruction": "Write a JavaScript function that takes a number as input and returns Double of the number.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=5\nconsole.log(execute(testCase)); // Should log 10",
+        "tests": [
+            {
+                "input": 2,
+                "output": 4
+            },
+            {
+                "input": 8,
+                "output": 16
+            },
+            {
+                "input": 0,
+                "output": 0
+            },
+            {
+                "input": 3,
+                "output": 6
+            },
+            {
+                "input": 10,
+                "output": 20
+            }
+        ]
+    },
+    {
+        "qId": "4",
+        "title": "Capitalizes the String",
+        "instruction": "Write a JavaScript function that takes a string as input and Capitalizes the first letter of each word in a string.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=\"Javascript is fun\"\nconsole.log(execute(testCase)); // Should log \"Javascript Is Fun\"",
+        "tests": [
+            {
+                "input": "\"hello world\"",
+                "output": "Hello World"
+            },
+            {
+                "input": "\"Javascript is fun\"",
+                "output": "Javascript Is Fun"
+            },
+            {
+                "input": "\"   singleword   \"",
+                "output": "Singleword"
+            },
+            {
+                "input": "\"no one is prefect\"",
+                "output": "No One Is Prefect"
+            },
+            {
+                "input": "\"\"",
+                "output": ""
+            }
+        ]
+    },
+    {
+        "qId": "5",
+        "title": "Count The words",
+        "instruction": "Write a JavaScript function that takes a string as input and return the number of words in the string.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=\"Javascript is fun\"\nconsole.log(execute(testCase)); // Should log 3",
+        "tests": [
+            {
+                "input": "\"Hello World\"",
+                "output": "2"
+            },
+            {
+                "input": "\"JavaScript is fun\"",
+                "output": "3"
+            },
+            {
+                "input": "\"  Frontend Development   \"",
+                "output": "2"
+            },
+            {
+                "input": "\"\"",
+                "output": "0"
+            },
+            {
+                "input": "\"   SingleWord   \"",
+                "output": "1"
+            }
+        ]
+    },
+    {
+        "qId": "6",
+        "title": "Half the number",
+        "instruction": "Write a JavaScript function that takes a number as input and returns Half of the number.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=10\nconsole.log(execute(testCase)); // Should log 5",
+        "tests": [
+            {
+                "input": 2,
+                "output": 1
+            },
+            {
+                "input": 16,
+                "output": 8
+            },
+            {
+                "input": 17,
+                "output": 8.5
+            },
+            {
+                "input": 20,
+                "output": 10
+            },
+            {
+                "input": 10,
+                "output": 5
+            }
+        ]
+    },
+    {
+        "qId": "7",
+        "title": "Reverse the String ",
+        "instruction": "Write a JavaScript function that takes a string as input and return reverse string.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=\"hello world\"\nconsole.log(execute(testCase)); //Should log \"dlrow olleh\"",
+        "tests": [
+            {
+                "input": "\"Fish\"",
+                "output": "hsiF"
+            },
+            {
+                "input": "\"JavaScript is fun\"",
+                "output": "nuf si tpircSavaJ"
+            },
+            {
+                "input": "\"Dog\"",
+                "output": "goD"
+            },
+            {
+                "input": "\"Fox\"",
+                "output": "xoF"
+            },
+            {
+                "input": "\"hello world\"",
+                "output": "dlrow olleh"
+            }
+        ]
+    },
+    {
+        "qId": "8",
+        "title": "Count the Vowel",
+        "instruction": "Write a JavaScript function that takes a string as input and return count of vowel in string.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=\"Hello, World\"\nconsole.log(execute(testCase)); //Should log 3",
+        "tests": [
+            {
+                "input": "\"JavaScript is awesome\"",
+                "output": 8
+            },
+            {
+                "input": "\"Hello, World!\"",
+                "output": 3
+            },
+            {
+                "input": "\"Coding is fun\"",
+                "output": 4
+            },
+            {
+                "input": "\"Elephant\"",
+                "output": 3
+            },
+            {
+                "input": "\"India is amazing\"",
+                "output": 7
+            }
+        ]
+    },
+    {
+        "qId": "9",
+        "title": "Square of the number",
+        "instruction": "Write a JavaScript function that takes a number as input and returns Square of the number.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=5\nconsole.log(execute(testCase)); // Should log 25",
+        "tests": [
+            {
+                "input": 2,
+                "output": 4
+            },
+            {
+                "input": 8,
+                "output": 64
+            },
+            {
+                "input": 0,
+                "output": 0
+            },
+            {
+                "input": 3,
+                "output": 9
+            },
+            {
+                "input": 12,
+                "output": 144
+            }
+        ]
+    },
+    {
+        "qId": "10",
+        "title": "Covert Hour in Seconds",
+        "instruction": "Write a JavaScript function that takes a Hour as input and returns Seconds.",
+        "initialCode": "//Note: Dont change the execute function.\nfunction execute(input){\n let result=\"\";\n //code your solution here & asign the output in result \n \n return result;\n}\n\nconst testCase=2\nconsole.log(execute(testCase)); // Should log 7200",
+        "tests": [
+            {
+                "input": 2,
+                "output": 7200
+            },
+            {
+                "input": 3,
+                "output": 10800
+            },
+            {
+                "input": 0,
+                "output": 0
+            },
+            {
+                "input": 4,
+                "output": 14400
+            },
+            {
+                "input": 1,
+                "output": 3600
+            }
+        ]
+    }
+]

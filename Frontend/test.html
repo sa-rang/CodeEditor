@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+</head>
+
+<body>
+
+    <button id="fetchButton">Fetch Data</button>
+
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', fetchData);
+
+        function fetchData() {
+            // Sample data to send in the request
+            const requestData = {
+                key1: 'value1',
+                key2: 'value2',
+            };
+
+            // API endpoint (replace with your actual endpoint)
+            const apiUrl = 'https://api.jdoodle.com/credit-spent';
+
+            // Fetch API using POST method
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', // Specify the content type as JSON
+                },
+                body: JSON.stringify(requestData), // Convert the data to JSON format
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json(); // Parse the JSON response
+                })
+                .then(data => {
+                    console.log('API Response:', data);
+                    // Handle the API response as needed
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Handle errors
+                });
+        }
+    </script>
+
+</body>
+
+</html>
